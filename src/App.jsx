@@ -5,6 +5,7 @@ import Slider from './components/Slider'
 import AboutUs from './components/AboutUs'
 import OurTeam from './components/OurTeam'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/team' element={<OurTeam />} />
           <Route path='/contact' element={<ContactForm />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )
