@@ -19,8 +19,8 @@ function App() {
           <Route path='/team' element={<OurTeam />} />
           <Route path='/contact' element={<ContactForm />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </>
   )
 }

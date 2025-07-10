@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 function Navbar() {
     return (
-        <header className="flex justify-between shadow-2xl py-4 px-8">
+        <header className="sticky top-0 bg-gray-800 text-stone-200 flex justify-between shadow-2xl py-4 px-8">
             <NavLink to='/' className="text-3xl cursor-pointer">Logo</NavLink>
             <nav className="flex gap-4">
                 <NavLink to='/' className={({ isActive }) =>
