@@ -22,14 +22,12 @@ function Slider() {
                         key={slide.id}
                         className={`flex-shrink-0 w-full h-101 p-10 rounded-md flex items-center justify-between text-white font-semibold ${slide.bg}`}
                     >
-                        <div
+                        {currentSlide != 0 && <div
                             className="p-4 bg-white opacity-45 rounded-full text-black shadow-2xl text-3xl cursor-pointer"
                             onClick={() => {
-                                if (currentSlide == 0) {
-                                    return;
-                                }
                                 setCurrentSlide(currentSlide - 1);
-                            }}><MdArrowBackIos /></div>
+                                clearInterval();
+                            }}><MdArrowBackIos /></div>}
                         <div className="px-8 py-4 h-full">
                             <div className="flex items-center gap-4">
                                 <img src={slide.image} alt="image" className="w-32 h-32 bg-blue-100 rounded-full mb-4" />
@@ -40,14 +38,13 @@ function Slider() {
                             </div>
                             {slide.bio}
                         </div>
-                        <div
+                        {currentSlide != 4 && <div
                             className="p-4 bg-white opacity-45 rounded-full text-black shadow-2xl text-3xl cursor-pointer"
                             onClick={() => {
-                                if (currentSlide == 4) {
-                                    return;
-                                }
                                 setCurrentSlide(currentSlide + 1);
-                            }}><MdArrowForwardIos /></div>
+                                clearInterval();
+
+                            }}><MdArrowForwardIos /></div>}
 
                     </div>
                 ))}
@@ -60,6 +57,8 @@ function Slider() {
                         key={idx}
                         onClick={() => {
                             setCurrentSlide(idx);
+                            clearInterval();
+
                         }}
                         className={` cursor-pointer w-3 h-3 rounded-full transition-colors ${idx === currentSlide ? 'bg-white' : 'bg-gray-400'
                             }`}
