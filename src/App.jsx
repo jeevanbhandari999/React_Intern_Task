@@ -6,6 +6,7 @@ import AboutUs from './components/AboutUs'
 import OurTeam from './components/OurTeam'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import APISearch from './components/APISearch'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/about' element={<AboutUs />} />
           <Route path='/team' element={<OurTeam />} />
           <Route path='/contact' element={<ContactForm />} />
+          <Route path='/apisearch' element={<APISearch />} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -16,10 +16,11 @@ function Navbar() {
                 <NavLink to='/contact' className={({ isActive }) =>
                     isActive ? "py-2 px-4 rounded-full text-xl bg-blue-600 hover:bg-blue-800 hover:text-stone-200 transition-all" : "py-2 px-4 rounded-full text-xl hover:bg-blue-800 hover:text-stone-200 transition-all"
                 }>Contact Us</NavLink>
+                <NavLink to='/apisearch' className={({ isActive }) =>
+                    isActive ? "py-2 px-4 rounded-full text-xl bg-blue-600 hover:bg-blue-800 hover:text-stone-200 transition-all" : "py-2 px-4 rounded-full text-xl hover:bg-blue-800 hover:text-stone-200 transition-all"
+                }>From API</NavLink>
             </nav>
-            <div>
-                dark
-            </div>
+
         </header>
     )
 }
